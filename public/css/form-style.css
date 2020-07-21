@@ -1,0 +1,131 @@
+@media (min-width: 768px){
+    .col-md-11 {
+        -ms-flex: 0 0 91.666667%;
+        flex: 0 0 91.666667%;
+        max-width: 89.666667%;
+    }
+}
+@media (min-width: 768px){
+    .col-md-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 45%;
+    }
+}
+.alx-page {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4rem;
+    color: #4a4a4a;
+    -webkit-font-smoothing: antialiased;
+}
+.alx-label {
+    box-sizing: border-box;
+    font-weight: 400;
+}
+.alx-form {
+    padding: 10px 0px;
+}
+.alx-form label {
+    color: #4A4A4A;
+    font-size: 0.875em;
+    line-height: 2em;
+    margin-bottom: 0rem;
+}
+.alx-form input {
+    max-width: 500px;
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 1em;
+    line-height: 2em;
+}
+.alx-form textarea {
+    display: inline-block;
+    font-size: 1em;
+}
+.alx-input-wrap {
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+.icheckbox_square-green {
+    margin-right: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 0pt 0.5pt #00927a;
+}
+.i-checks {
+    padding: 8px 0px;
+}
+.alx-img {
+    margin: 2px;
+}
+.alx-pad-mar {
+    padding: 16px;
+    margin: 0 auto;
+}
+.alx-mar {
+    margin: 0 auto;
+}
+.alx-socmed {
+    padding-bottom: 70px;
+}
+.alx-button {
+    padding: 8px 20px;
+}
+
+.bootstrap-select>.dropdown-toggle.bs-placeholder,
+.bootstrap-select>.dropdown-toggle.bs-placeholder:active,
+.bootstrap-select>.dropdown-toggle.bs-placeholder:focus,
+.bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
+    color: #69757e !important;
+    font-size: 1em;
+    line-height: 2em;
+    background-color: #fff;
+}
+
+.bootstrap-select {
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.btn-light {
+    color: #50575f;
+    background-color: #fff;
+    border-color: #f8f9fa;
+    font-size: 1em;
+    line-height: 2em;
+}
+
+/* bootstrap tagsinput */
+.bootstrap-tagsinput {
+    width: 100%;
+}
+
+.twitter-typeahead {
+    position: relative !important;
+    display: inline !important;
+}
+
+/* error message */
+.invalid-feedback {
+    display: block !important;
+}
+
+/* report cgsl */
+.easy-autocomplete-container {
+    top: 100%;
+}
+
+.btn-search {
+    margin-left:10px;
+    padding: 8px 13px;
+}
+
+.form-radius {
+    border-radius: 4px !important;
+}
