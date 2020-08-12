@@ -18,7 +18,7 @@ class PembelianController extends Controller
 
     public function ajaxList()
     {
-        $data = Pembelian::where();
+        $data = Pembelian::all();
 
         $datatables = DataTables::of($data);
         return $datatables->addColumn('action', function ($row) {

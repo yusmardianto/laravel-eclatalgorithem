@@ -28,3 +28,11 @@ Route::post('penjualan/delete/{id}', 'PenjualanController@destroy');
 Route::post('penjualan/upload', 'PenjualanController@uploadExcel');
 
 //prediksi
+
+
+
+//eclat
+Route::prefix('laporan')->group(function () {
+    Route::get('eclat', 'EclatController@index');
+    Route::any('eclat/ajax-list', 'EclatController@ajaxList');
+});
