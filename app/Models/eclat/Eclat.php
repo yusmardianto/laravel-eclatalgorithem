@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\prediksi;
+namespace App\Models\eclat;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Prediksi extends Model
+class Eclat extends Model
 {
     //
 }

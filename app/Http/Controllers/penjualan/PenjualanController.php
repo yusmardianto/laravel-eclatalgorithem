@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Imports\PenjualanImport;
 use App\Models\penjualan\Penjualan;
-use DataTables, Hasher, Excel;
+use DataTables, Excel;
+
+use function GuzzleHttp\Promise\all;
 
 class PenjualanController extends Controller
 {
@@ -17,11 +19,11 @@ class PenjualanController extends Controller
 
     public function ajaxList()
     {
-        $data = Penjualan::where();
+        $data = Penjualan::all();
 
         $datatables = DataTables::of($data);
         return $datatables->addColumn('action', function ($row) {
-            $hashed_id = Hasher::encode($row->id);
+            $hashed_id =$row->id;
                 return "
                 <a class=\"btn btn-xs btn-info\" href=\"". url('penjualan/detail/'.$hashed_id) ."\"><i class=\"glyphicon glyphicon-eye-open\"></i> Detail</a>
                 <a class=\"btn btn-xs btn-primary\" href=\"". url('penjualan/edit/'.$hashed_id) ."\"><i class=\"glyphicon glyphicon-edit\"></i> Ubah</a>

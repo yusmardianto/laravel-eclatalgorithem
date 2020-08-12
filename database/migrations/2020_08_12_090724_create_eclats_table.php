@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePrediksisTable extends Migration
+class CreateEclatsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePrediksisTable extends Migration
      */
     public function up()
     {
-        Schema::create('prediksis', function (Blueprint $table) {
+        Schema::create('eclats', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreatePrediksisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('prediksis');
+        Schema::dropIfExists('eclats');
     }
 }
