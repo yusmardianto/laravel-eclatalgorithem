@@ -33,9 +33,13 @@
 
         var $column = [
             { data: 'DT_RowIndex', name: 'DT_RowIndex', searchable: false, orderable: false },
-            { data: 'kode_aktif', name: 'kode_aktif' },
-            { data: 'nama', name: 'nama' },
-            { data: 'nip', name: 'nip' },
+            { data: 'purchase_document', name: 'purchase_document' },
+            { data: 'name_product', name: 'name_product' },
+            { data: 'stock', name: 'stock' },
+            { data: 'order_quantity', name: 'order_quantity' },
+            { data: 'order_unit', name: 'order_unit' },
+            { data: 'origin', name: 'origin' },
+            { data: 'keterangan', name: 'keterangan' },
             { data: 'action', name: 'action', orderable: false, searchable: false },
         ];
 
@@ -43,7 +47,7 @@
             processing: true,
             serverSide: true,
             ajax: {
-                url: '{!! url('kepesertaan/peserta-aktif/ajax-list') !!}',
+                url: '{!! url('penjualan/ajax-list') !!}',
                 method: 'POST'
             },
             columns: $column,
@@ -54,11 +58,11 @@
                     "width": "4%"
                 },
                 {
-                    "targets": [1,3],
+                    "targets": [0,1,2,3,4,5,6,7],
                     "className": "text-center",
                 },
                 {
-                    "targets": 4,
+                    "targets": 8,
                     "width": "21%"
                 }
             ],
@@ -146,9 +150,12 @@
                             <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Kode Product</th>
-                                <th>Nama Product</th>
+                                <th>Purchase Document</th>
+                                <th>Name Product</th>
                                 <th>Stock</th>
+                                <th>Order Quantity</th>
+                                <th>Order Unit</th>
+                                <th>Origin</th>
                                 <th>Keterangan</th>
                                 <th>Aksi</th>
                             </tr>
@@ -169,7 +176,7 @@
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                 <h4 class="modal-title">Upload Excel</h4>
             </div>
-            <form action="{{ url('kepesertaan/peserta-aktif/upload') }}" method="post" role="form" enctype="multipart/form-data">
+            <form action="{{ url('penjualan/upload') }}" method="post" role="form" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-body">
                     <div class="form-group">

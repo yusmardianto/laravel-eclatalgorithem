@@ -32,13 +32,10 @@ $user = Auth::user();
                 </a>
                 <ul class="nav nav-second-level collapse">
                     <li>
-                        <a href="{{ url('pembelian') }}">Pembelian</a>
-                    </li>
-                    <li>
                         <a href="{{ url('penjualan') }}">Penjualan</a>
                     </li>
                     <li>
-                        <a href="{{ url('prediksi') }}">Prediksi Stock</a>
+                        <a href="{{ url('eclat') }}">Analisa Eclat</a>
                     </li>
                 </ul>
             </li>

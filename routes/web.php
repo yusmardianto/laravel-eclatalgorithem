@@ -21,14 +21,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//pembelian
-Route::get('pembelian', 'PembelianController@index');
-Route::any('pembelian/ajax-list', 'PembelianController@ajaxList');
-Route::post('pembelian/delete/{id}', 'PembelianController@destroy');
-Route::post('pembelian/upload', 'PembelianController@uploadExcel');
-
 //penjualan
 Route::get('penjualan', 'PenjualanController@index');
+Route::any('penjualan/ajax-list', 'PenjualanController@ajaxList');
+Route::post('penjualan/delete/{id}', 'PenjualanController@destroy');
 Route::post('penjualan/upload', 'PenjualanController@uploadExcel');
 
 //prediksi

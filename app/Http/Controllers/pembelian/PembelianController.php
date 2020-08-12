@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Imports\PembelianImport;
 use App\Models\pembelian\Pembelian;
-use DataTables, Hasher, Validator, DB, Excel;
+use DataTables, Hasher, Excel;
+
 
 class PembelianController extends Controller
 {
