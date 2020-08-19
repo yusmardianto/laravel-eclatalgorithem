@@ -27,7 +27,7 @@ class PenjualanController extends Controller
                 return "
                 <a class=\"btn btn-xs btn-info\" href=\"". url('penjualan/detail/'.$hashed_id) ."\"><i class=\"glyphicon glyphicon-eye-open\"></i> Detail</a>
                 <a class=\"btn btn-xs btn-primary\" href=\"". url('penjualan/edit/'.$hashed_id) ."\"><i class=\"glyphicon glyphicon-edit\"></i> Ubah</a>
-                <a class=\"btn btn-xs btn-warning delete-btn\" href=\"#\" data-id=\"". $hashed_id ."\" data-name=\"". $row->name_product ."\"><i class=\"glyphicon glyphicon-trash\"></i> Hapus</a>
+                <a class=\"btn btn-xs btn-warning delete-btn\" href=\"#\" data-id=\"". $hashed_id ."\" data-name=\"". $row->bill_name ."\"><i class=\"glyphicon glyphicon-trash\"></i> Hapus</a>
                 ";
             })
             ->rawColumns(['action'])
@@ -62,7 +62,7 @@ class PenjualanController extends Controller
         $data = Penjualan::find($id);
         if(isset($data))
         {
-            return redirect()->back()->with('success', 'Berhasil menghapus Data Penjualan'.$data->name_product);
+            return redirect()->back()->with('success', 'Berhasil menghapus Data Penjualan'.$data->bill_name);
         }
         else
         {

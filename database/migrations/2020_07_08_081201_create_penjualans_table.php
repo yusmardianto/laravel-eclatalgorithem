@@ -14,14 +14,11 @@ class CreatePenjualansTable extends Migration
     public function up()
     {
         Schema::create('penjualans', function (Blueprint $table) {
-            $table->id();
-            $table->bigInteger('purchase_document')->nullable();
-            $table->string('name_product')->nullable();
-            $table->bigInteger('stock')->nullable();
-            $table->bigInteger('order_quantity')->nullable();
-            $table->string('order_unit')->nullable();
-            $table->string('origin')->nullable();
-            $table->text('keterangan')->nullable();
+            $table->bigIncrements('id');
+            $table->string('TIDList')->nullable();
+            $table->string('name_bill')->nullable();
+            $table->string('material')->nullable();
+            $table->string('text_material')->nullable();
             $table->timestamps();
         });
     }

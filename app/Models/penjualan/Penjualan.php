@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Penjualan extends Model
 {
     protected $fillable = [
-        'purchase_document', 'name_product', 'stock', 'order_quantity', 'order_unit', 'origin','keterangan'
+        'TIDList', 'name_bill', 'material', 'text_material'
     ];
 }

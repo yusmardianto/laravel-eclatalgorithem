@@ -33,14 +33,10 @@
 
         var $column = [
             { data: 'DT_RowIndex', name: 'DT_RowIndex', searchable: false, orderable: false },
-            { data: 'purchase_document', name: 'purchase_document' },
-            { data: 'name_product', name: 'name_product' },
-            { data: 'stock', name: 'stock' },
-            { data: 'order_quantity', name: 'order_quantity' },
-            { data: 'order_unit', name: 'order_unit' },
-            { data: 'origin', name: 'origin' },
-            { data: 'keterangan', name: 'keterangan' },
-            { data: 'action', name: 'action', orderable: false, searchable: false },
+            { data: 'TIDList', name: 'TIDList' },
+            { data: 'name_bill', name: 'name_bill' },
+            { data: 'material', name: 'material' },
+            { data: 'text_material', name: 'text_material' },
         ];
 
         $('#table-list').DataTable({
@@ -58,7 +54,7 @@
                     "width": "4%"
                 },
                 {
-                    "targets": 8,
+                    "targets": 4,
                     "width": "21%"
                 }
             ],
@@ -146,14 +142,10 @@
                             <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Purchase Document</th>
-                                <th>Name Product</th>
-                                <th>Stock</th>
-                                <th>Order Quantity</th>
-                                <th>Order Unit</th>
-                                <th>Origin</th>
-                                <th>Keterangan</th>
-                                <th>Aksi</th>
+                                <th>TID List</th>
+                                <th>Name Bill To</th>
+                                <th>Material</th>
+                                <th>Text Material</th>
                             </tr>
                             </thead>
                         </table>
